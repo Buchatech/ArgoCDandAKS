@@ -1,28 +1,28 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-kubernetes-custom
+  name: hello-k8s-custom
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: hello-kubernetes-custom
+    app: hello-k8s-custom
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes-custom
+  name: hello-k8s-custom
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-kubernetes-custom
+      app: hello-k8s-custom
   template:
     metadata:
       labels:
-        app: hello-kubernetes-custom
+        app: hello-k8s-custom
     spec:
       containers:
       - name: hello-kubernetes
