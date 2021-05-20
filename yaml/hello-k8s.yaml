@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: hello-k8s-custom
 spec:
-  replicas: 2
+  replicas: 7
   selector:
     matchLabels:
       app: hello-k8s-custom
